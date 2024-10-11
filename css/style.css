@@ -1,0 +1,113 @@
+:root {
+  --clr-primary-400: hsl(225, 100%, 94%);
+  --clr-primary-600: hsl(245, 75%, 52%);
+
+  --clr-neutral-100: hsl(225, 100%, 98%);
+  --clr-neutral-400: hsl(224, 23%, 55%);
+  --clr-neutral-600: hsl(223, 47%, 23%);
+
+  --fw-500: 500;
+  --fw-700: 700;
+  --fw-900: 900;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  background-color: var(--clr-primary-400);
+  font-family: "Red Hat Display", sans-serif;
+}
+main {
+  border: 1px solid green;
+  width: 75%;
+  margin: 100px auto;
+  text-align: center;
+  background-color: white;
+  border-radius: 12px;
+}
+.banner-image {
+  height: 220px;
+  width: 100%;
+  background-image: url(../images/illustration-hero.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 12px 12px 0px 0px;
+}
+
+.order-summary-container .order-summary {
+  h3 {
+    font-weight: var(--fw-900);
+    margin-top: 25px;
+    font-size: 1.2rem;
+  }
+  p {
+    margin: 20px 10%;
+    font-size: 1rem;
+    color: var(--clr-neutral-400);
+    font-weight: var(--fw-500);
+  }
+}
+
+.payment-plan {
+  width: 80%;
+  margin: 0px auto;
+  display: flex;
+  align-items: center;
+  padding: 5px 10px;
+  background-color: var(--clr-neutral-100);
+  img {
+    padding-right: 10px;
+  }
+  p {
+    color: var(--clr-neutral-400);
+  }
+  a {
+    margin-left: auto;
+
+    color: var(--clr-primary-600);
+    font-size: 12px;
+    font-weight: var(--fw-700);
+  }
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 50px;
+  gap: 1rem;
+  padding-bottom: 20px;
+
+  .payment-btn {
+    color: white;
+    background-color: var(--clr-primary-600);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 10px 10px 20px 0px rgba(0, 0, 0, 0.2);
+    transition: all 0.1s ease-in;
+  }
+  .payment-btn:hover {
+    background-color: var(--clr-neutral-400);
+  }
+  .cancel {
+    background-color: white;
+    border: none;
+    color: hsl(224, 23%, 55%);
+    font-weight: var(--fw-700);
+  }
+  .cancel:hover {
+    color: red;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  main {
+    width: 450px;
+  }
+}
