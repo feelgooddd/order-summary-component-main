@@ -20,7 +20,10 @@ body,
 html {
   height: 100%;
   background-color: var(--clr-primary-400);
+  background-repeat: no-repeat;
+  background-size: contain;
   font-family: "Red Hat Display", sans-serif;
+  background-image: url(../images/pattern-background-desktop.svg);
 }
 main {
   border: 1px solid green;
@@ -61,6 +64,8 @@ main {
   align-items: center;
   padding: 5px 10px;
   background-color: var(--clr-neutral-100);
+  flex-basis: 0;
+
   img {
     padding-right: 10px;
   }
@@ -69,7 +74,7 @@ main {
   }
   a {
     margin-left: auto;
-
+    flex-shrink: 0;
     color: var(--clr-primary-600);
     font-size: 12px;
     font-weight: var(--fw-700);
